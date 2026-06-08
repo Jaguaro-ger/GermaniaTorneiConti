@@ -2,15 +2,12 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <!-- FORZATURA DESKTOP SU MOBILE -->
     <meta name="viewport" content="width=1200">
     <title>Campo Allenamento - Germania Conti Young</title>
-    <!-- FAVICON ICONA AGGIORNATA -->
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
@@ -74,9 +71,10 @@
                 </div>
             </li>
             <li><a href="campo.html" style="color:#d4af37;">Campo Allenamento</a></li>
+            <!-- CALENDARIO AGGIUNTO -->
+            <li><a href="calendario.html">Calendario</a></li>
             <li><a href="classifica.html">Classifica</a></li>
             <li><a href="convocazioni.html">Convocazioni</a></li>
-            <!-- CORRETTO: SCENDE IN FONDO A QUESTA PAGINA -->
             <li><a href="#contatti">Contatti</a></li>
             <li class="nav-social">
                 <a href="https://www.instagram.com/germania_torneicontiyoung?utm_source=qr" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -89,7 +87,7 @@
 <div class="map-container">
     <h2>IL NOSTRO CAMPO DA GIOCO</h2>
     <p>Ci alleniamo presso la <b>SSD Airone</b> in Via del Quadraro, Roma.</p>
-    <p>Si trova a 2 minutes dalla fermata <b>MA Lucio Sestio.</b></p>
+    <p>Si trova a 2 minuti dalla fermata <b>MA Lucio Sestio.</b></p>
     
     <div id="map"></div>
 
@@ -110,14 +108,11 @@
 <script>
     var lat = 41.8647;
     var lng = 12.5332;
-
     var map = L.map('map').setView([lat, lng], 17);
-    
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        attribution: '&copy; OpenStreetMap'
     }).addTo(map);
-
     var marker = L.marker([lat, lng]).addTo(map);
     marker.bindPopup("<b>SSD Airone</b><br>Campo di allenamento della Germania.").openPopup();
 </script>

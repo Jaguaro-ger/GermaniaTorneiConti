@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <!-- FORZATURA DESKTOP SU MOBILE -->
+    <meta name="viewport" content="width=1200">
+    <title>Calendario Gare - Germania Conti Young</title>
+    <!-- FAVICON ICONA -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .cal-container {
+            padding-top: 140px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+        .match-poster {
+            max-width: 550px;
+            width: 100%;
+            border: 2px solid #d4af37;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            margin: 25px auto;
+            display: block;
+        }
+        /* Stile Countdown */
+        .countdown-section {
+            background: #151515;
+            border: 2px solid #d4af37;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 650px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+        }
+        .countdown-section h3 {
+            color: #ffffff;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+        .time-box {
+            background: #090909;
+            border: 1px solid rgba(214, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 15px;
+            min-width: 90px;
+        }
+        .time-box span {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #d4af37;
+        }
+        .time-box p {
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+            margin-top: 5px;
+            font-weight: 600;
+        }
+        /* Dettagli Match */
+        .match-details-card {
+            background: #090909;
+            border-left: 4px solid #d4af37;
+            padding: 20px;
+            max-width: 650px;
+            margin: 20px auto;
+            text-align: left;
+            border-radius: 0 15px 15px 0;
+        }
+        .match-details-card p {
+            margin: 8px 0;
+            font-size: 1.1rem;
+        }
+        .match-details-card i {
+            color: #d4af37;
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+        .back-btn-container {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="logoppp.JPG" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#team">Team</a></li>
+            <li><a href="index.html#staff">Staff</a></li>
+            <li class="dropdown">
+                <a class="dropbtn">Amichevole</a>
+                <div class="dropdown-content">
+                    <a href="partita.html" class="dropdown-link">vs Galles</a>
+                </div>
+            </li>
+            <li><a href="campo.html">Campo Allenamento</a></li>
+            <li><a href="calendario.html" style="color:#d4af37;">Calendario</a></li>
+            <li><a href="classifica.html">Classifica</a></li>
+            <li><a href="convocazioni.html">Convocazioni</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+            <li class="nav-social">
+                <a href="https://www.instagram.com/germania_torneicontiyoung?utm_source=qr" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@germania_torneiconti2k26?_r=1&_t=ZN-96xFqH0A2fG" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="cal-container">
+    <h2>CALENDARIO PROSSIME GARE</h2>
+    <p style="font-size: 1.2rem; color: #888;">Fase a Gironi - Girone M (1ª Giornata)</p>
+
+    <!-- LOCANDINA AGGIUNTA -->
+    <img src="1gvsma.JPG" alt="Locandina Germania vs Marocco" class="match-poster">
+
+    <!-- SEZIONE LIVE COUNTDOWN SOTTO LA LOCANDINA -->
+    <div class="countdown-section">
+        <h3>Al fischio d'inizio manca:</h3>
+        <div class="timer">
+            <div class="time-box">
+                <span id="days">00</span>
+                <p>Giorni</p>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <p>Ore</p>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <p>Minuti</p>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <p>Secondi</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ULTERIORI DETTAGLI GARA -->
+    <div class="match-details-card">
+        <p><i class="fa-solid fa-trophy"></i> <b>Competizione:</b> Tornei Conti - Torneo Conti Young (Girone M)</p>
+        <p><i class="fa-solid fa-calendar-days"></i> <b>Data:</b> Mercoledì, 10 Giugno</p>
+        <p><i class="fa-solid fa-clock"></i> <b>Orario:</b> 20:45</p>
+        <p><i class="fa-solid fa-location-dot"></i> <b>Impianto:</b> Campo Airone (Via del Quadraro 45 A, Roma)</p>
+        <p><i class="fa-solid fa-train-subway"></i> <b>Riferimento:</b> Metro A - Fermata Lucio Sestio</p>
+    </div>
+
+    <div class="back-btn-container">
+        <a href="index.html" class="btn">← TORNA ALLA HOME</a>
+    </div>
+</div>
+
+<footer id="contatti">
+    <div class="footer-social">
+        <a href="https://www.instagram.com/germania_torneicontiyoung?utm_source=qr" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.tiktok.com/@germania_torneiconti2k26?_r=1&_t=ZN-96xFqH0A2fG" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i> TikTok</a>
+    </div>
+    <p style="margin-top: 20px;">© 2025 - 2026 Germania Conti Young</p>
+    <p>Roma - Torneo Conti Young</p>
+</footer>
+
+<!-- SCRIPT LOGICA DEL COUNTDOWN -->
+<script>
+    // Imposta la data del match (10 Giugno alle 20:45)
+    // Nota: Impostato dinamicamente sull'anno corrente della competizione
+    const dataPartita = new Date("June 10, 2026 20:45:00").getTime();
+
+    const x = setInterval(function() {
+        const adesso = new Date().getTime();
+        const distanza = dataPartita - adesso;
+
+        const giorni = Math.floor(distanza / (1000 * 60 * 60 * 24));
+        const ore = Math.floor((distanza % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minuti = Math.floor((distanza % (1000 * 60 * 60)) / (1000 * 60));
+        const secondi = Math.floor((distanza % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerHTML = giorni < 10 ? "0" + giorni : giorni;
+        document.getElementById("hours").innerHTML = ore < 10 ? "0" + ore : ore;
+        document.getElementById("minutes").innerHTML = minuti < 10 ? "0" + minuti : minuti;
+        document.getElementById("seconds").innerHTML = secondi < 10 ? "0" + secondi : secondi;
+
+        if (distanza < 0) {
+            clearInterval(x);
+            document.querySelector(".countdown-section h3").innerHTML = "MATCH IN CORSO O TERMINATO!";
+            document.querySelector(".timer").style.display = "none";
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>
